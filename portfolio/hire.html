@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h3>My Portfolio</h3>
+        <nav>
+          <span class="close-icon">x</span>
+          <a href="index.html">Home</a><a href="">About Me</a><a href="">Projects</a
+          ><a href="">Contact Me</a><a href="hire.html">Hire me</a>
+        </nav>
+        <img class="menu-icon" src="assets/menu.svg" alt="" />
+      </header>
+      <main>
+            <div class="hire-me-heading">
+                <h1>Hire me</h1>
+                <img src="assets/underline.png" alt="">
+            </div>
+            <section class="hire-me">
+                <form action="">
+                    <label for="">Full Name</label>
+                    <input type="text" placeholder="Enter name">
+                    <label for="">Email Address</label>
+                    <input type="email" placeholder="Enter email address">
+                    <label for="">Your budget</label>
+                    <input type="number" placeholder="Enter the amount you're willing to pay">
+                    <label for="">Subject</label>
+                    <textarea placeholder="Write a short description of your project" name="" id="" cols="20" rows="10"></textarea>
+                    <button type="submit">Submit</button>
+                </form>
+                <img src="assets/unsplash_hGV2TfOh0ns-removebg-preview 1.png" alt="">
+            </section>
+            <aside class="darkmode">
+                  <img class="toggle-image" src="assets/moon-line.png" alt="">
+              </aside>
+      </main>
+      <script>
+        const menu = document.querySelector(".menu-icon");
+        const close = document.querySelector(".close-icon");
+        const nav = document.querySelector("nav");
+        const body = document.querySelector("body");
+        const toggleImage = document.querySelector(".toggle-image");
+        menu.addEventListener("click", () => {
+          nav.classList.toggle("active");
+          console.log("click");
+        });
+        close.addEventListener("click", () => {
+          nav.classList.toggle("active");
+          console.log("click");
+        });
+        toggleImage.addEventListener("click", () => {
+          body.classList.toggle("dark");
+          toggleImage.getAttribute("src") === "assets/moon-line.png"
+            ? toggleImage.setAttribute("src", "assets/sun-line.png")
+            : toggleImage.setAttribute("src", "assets/moon-line.png");
+          console.log("click");
+        });
+      </script>
+</body>
+</html>

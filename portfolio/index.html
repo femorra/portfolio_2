@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h3>My Portfolio</h3>
+      <nav>
+        <span class="close-icon">x</span>
+        <a href="index.html">Home</a><a href="">About Me</a
+        ><a href="">Projects</a><a href="">Contact Me</a
+        ><a href="hire.html">Hire me</a>
+      </nav>
+      <img class="menu-icon" src="assets/menu.svg" alt="" />
+    </header>
+    <main>
+      <div class="hero">
+        <div class="hero-text">
+          <h4>Hi there!</h4>
+          <h1>My Name is <span>George Bush</span></h1>
+          <p>
+            I am a UIUX and Frontend Developer who is passsionate about solving
+            real life problems with basic and minimalistic designs with a focus
+            on responsiveness and accessibility.
+          </p>
+          <div class="cta cta-desktop">
+            <button>Hire me</button> <button>See Projects</button>
+          </div>
+        </div>
+        <div class="hero-image">
+          <img src="assets/copy_unsplash-removebg-preview 2.png" alt="" />
+        </div>
+        <div class="cta cta-mobile">
+          <button>Hire me</button> <button>See Projects</button>
+        </div>
+      </div>
+      <div class="stats">
+        <div>
+          <img src="assets/Vector1.png" alt="" />
+          <span
+            >2k Satisfied <br />
+            Clients</span
+          >
+        </div>
+        <div>
+          <img src="assets/octicon_project-symlink-24.png" alt="" />
+          <span
+            >3.5k Completed <br />
+            Projects</span
+          >
+        </div>
+        <div>
+          <img src="assets/Vector3.png" alt="" />
+          <span
+            >Satisfaction <br />
+            Guaranteed</span
+          >
+        </div>
+      </div>
+      <aside class="darkmode">
+        <img class="toggle-image" src="assets/moon-line.png" alt="">
+    </aside>
+    </main>
+
+    <script>
+        const menu = document.querySelector(".menu-icon");
+        const close = document.querySelector(".close-icon");
+        const nav = document.querySelector("nav");
+        const body = document.querySelector("body");
+        const toggleImage = document.querySelector(".toggle-image");
+        menu.addEventListener("click", () => {
+          nav.classList.toggle("active");
+          console.log("click");
+        });
+        close.addEventListener("click", () => {
+          nav.classList.toggle("active");
+          console.log("click");
+        });
+        toggleImage.addEventListener("click", () => {
+          body.classList.toggle("dark");
+          toggleImage.getAttribute("src") === "assets/moon-line.png"
+            ? toggleImage.setAttribute("src", "assets/sun-line.png")
+            : toggleImage.setAttribute("src", "assets/moon-line.png");
+          console.log("click");
+        });
+      </script>
+  </body>
+</html>
